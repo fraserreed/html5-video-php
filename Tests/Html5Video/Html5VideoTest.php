@@ -116,7 +116,7 @@ EOT;
     $html5video = $this->createHtml5VideoMock($commandMock);
 
     $encoders = $html5video->getEncoders();
-    $this->assertSame(array('aac', 'libmp3lame', 'libvorbis', 'libvpx', 'libx264'), $encoders);
+    $this->assertSame(array('aac', 'aac_latm', 'libmp3lame', 'libvorbis', 'libvpx', 'libx264'), $encoders);
   }
 
   public function testGetProfile() {

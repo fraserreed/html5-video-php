@@ -92,7 +92,7 @@ class Html5Video {
     foreach ($lines as $line) {
       if (preg_match('/^\s+([A-Z .]+)\s+(\w{2,})\s+(.*)$/', $line, $m)) {
         $type = trim($m[1]);
-        if (strpos($type, 'E') !== false) {
+        if (strpos($type, 'E') !== false || strpos($type, 'D') !== false) {
           $encoder = trim($m[2]);
           if (strpos($encoder, ',') !== false) {
             foreach (split(',', $encoder) as $e) {
